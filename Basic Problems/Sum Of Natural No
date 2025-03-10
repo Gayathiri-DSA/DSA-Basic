@@ -1,1 +1,19 @@
 
+class Solution 
+{
+    public static int seriesSum(int n) 
+    {
+        int sum=0; // Initialize sum to 0 to store the sum of NN
+        
+        if(n<0) // edge/base case 
+        {
+        return 0;
+        }
+    
+      for(int i=1;i<=n;i++)//for loop
+      {
+          sum+=i;//sum=sum+i for each loop the i (1,2..n) is added with sum(initially 0 then changes after increment)
+      }
+      return sum;//print the output sum
+    }
+}
