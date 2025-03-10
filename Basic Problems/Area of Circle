@@ -1,0 +1,24 @@
+/*
+
+Area of a Circle
+
+Difficulty: EasyAccuracy: 67.83%Submissions: 445+Points: 2Average Time: 5m
+
+Given the radius of circle r. The task is to find the area of circle.
+
+problem link : https://www.geeksforgeeks.org/problems/area-of-a-circle/1?page=1&difficulty=Basic,Easy&status=solved&sortBy=submissions
+
+*/
+class Solution {
+    // Method to calculate the area (assuming it's a circle with the given radius)
+    public double calculateArea(double R) {
+         return (double) Math.PI*R*R;
+    }
+}
+
+/*
+Note:
+        Math.PI is a inbuilt mathematical function in java to use the value of Pi rather than manually typing the value of it 
+        and the rest is the formula to find area of circle pi r^2
+        To get accurate values after decimal best to use is double (8byte) type than float (4byte)
+*/
