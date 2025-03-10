@@ -1,0 +1,48 @@
+/*
+
+Sum Of Digits
+
+Difficulty: BasicAccuracy: 67.08%Submissions: 48K+Points: 1
+
+Given a number n. Find the sum of all the digits of n.
+
+problem link :https://www.geeksforgeeks.org/problems/sum-of-digits1742/1?page=1&difficulty=Basic,Easy&status=solved&sortBy=submissions
+
+*/
+class Solution {
+    static int sumOfDigits(int n) {
+        int sum=0;
+        while(n>0)
+        {
+               int digit = n%10;
+               sum+=digit;
+               n=n/10;
+            
+        }
+        return sum;
+    }
+}
+
+
+/*
+Note:
+    ** check Edge/Base case when n is not/greater than 0 enters the loop
+    ** Get/extract Last Digit (i.e units place) by % 10 
+    ** initially sum is 0 the last digit will be added to sum (0) nad stored in sum which can be written as sum=sum + digit;
+    ** then to get remove units place n/10 is done and decimal moves one place forward and so on until all digits in n is added
+    
+    
+    eg: n=12
+    n%10 --> 2
+    sum=0+2 ==> sum-2
+    n/10 -->1.2
+    
+    nxt iteration:
+    n=1.2 
+    n%10-->1
+    sum=2+1==>sum=3
+    n/10-->0.12
+    
+    return sum==3
+    */
+    
