@@ -1,0 +1,29 @@
+/*
+Odd or Even
+
+Difficulty: Basic Accuracy: 60.6% Submissions: 135K+ Points: 1 Average Time: 5m
+
+Given a positive integer n, determine whether it is odd or even. Return true if the number is even and false if the number is odd.
+
+Problem Link :https://www.geeksforgeeks.org/problems/odd-or-even3618/1?page=1&difficulty=Basic,Easy&status=solved&sortBy=submissions
+*/
+
+
+
+
+class Solution {
+    static boolean isEven(int n) {
+       if(n%2==0) 
+       {
+           return true;
+       }
+       else
+       {
+           return false;
+       }
+    }
+}
+/*
+Note :
+when given no div by 2 should return 0 in case of even else it is considered as odd which return false
+*/
