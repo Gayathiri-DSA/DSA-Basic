@@ -1,0 +1,28 @@
+/*
+Check if two strings are same or not
+
+Difficulty: Easy Accuracy: 55.18% Submissions: 87+ Points: 2 Average Time: 5m
+
+Given two strings, determine if they are exactly the same, considering case sensitivity.
+
+problrm link : https://www.geeksforgeeks.org/problems/check-if-two-strings-are-same-or-not--155406/1?page=1&difficulty=Basic,Easy&status=solved&sortBy=submissions
+*/
+
+class StringUtils 
+{
+    // Function to check if two strings are the same
+    public static boolean areStringsSame(String s1, String s2)
+    {
+      if(s1==s2)
+            return true;
+        else
+            return false;
+        
+    }
+}
+
+/*Note:
+    **  Simple if else loop: equals equals operator used to check if two strings are equal
+    ** Using Return Statement directly in  a single line can also be used
+    **  can also use equals() function and pass s2 as args
+*/
