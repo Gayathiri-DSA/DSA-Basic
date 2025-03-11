@@ -1,0 +1,105 @@
+/*
+GCD of two numbers
+
+Difficulty: BasicAccuracy: 51.03%Submissions: 105K+Points: 1
+
+Given two positive integers a and b, find GCD of a and b.
+
+Note: Don't use the inbuilt gcd function
+
+problem link : https://www.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1?page=1&difficulty=Basic,Easy&status=solved&sortBy=submissions
+
+*/
+
+class Solution
+{
+    public static int gcd(int a, int b) 
+    {   
+        /* Brute Force -- tie exceeded
+        int gcd=1;
+        for(int i=2 ; i<=a && i<=b ; i++)
+        {
+           if(a%i==0 && b%i==0 )
+            {
+               gcd=i;
+            }
+        }
+       return gcd; */
+       
+     while (b != 0) {
+        a = a % b;  // Step 1: Update a with the remainder of a divided by b
+        int temp = a;  // Step 2: Store the current value of a in temp
+        a = b;  // Step 3: Set a to the previous value of b
+        b = temp;  // Step 4: Set b to the previous value of a (stored in temp)
+    }
+    return a;  // When b becomes 0, a will contain the GCD
+    }
+}
+
+/*
+Note: Brute force 
+    **Assign global variable gcd=1 since every no has common factor 1 in case it doesnt have other factors
+    ** for loop initialize : i to 2 condt: i should be equal to a & b (the no itself ) incase one of the number itself a dividend/divisor (eg : a=15 and b=30 gcd is 15 )incr: i by 1
+    ** when the no a&b divided by i leaves remainder 0 then it i a divisor of a&b
+    ** assign i -- local var which cant be used outside for loop -- to gcd and return greatest common divisor of a and b 
+    
+    
+    Optimised code :Euclidian algo
+    ** while b(divisor) not equal to 0 enters the loop 
+    ** divide and  store remainder in a
+    ** create a tempoarary var (temp)  and store the remainder value of a.
+    ** store the divisor b in variable a
+    ** store temp/rem var in b
+    return a // which contains the gcd
+    */
+    
+    
+    
+    
+/* 
+DRY RUN:
+    Initial Values:
+a = 48
+b = 18
+First Iteration (a = 48, b = 18):
+Step 1: a = a % b = 48 % 18 = 12
+Now, a becomes 12.
+Step 2: int temp = a = 12
+temp now holds the value 12.
+Step 3: a = b = 18
+Now, a becomes 18 (the previous value of b).
+Step 4: b = temp = 12
+Now, b becomes 12 (the original value of a before it was changed).
+Now, the new values are:
+
+a = 18
+b = 12
+Second Iteration (a = 18, b = 12):
+Step 1: a = a % b = 18 % 12 = 6
+Now, a becomes 6.
+Step 2: int temp = a = 6
+temp now holds the value 6.
+Step 3: a = b = 12
+Now, a becomes 12 (the previous value of b).
+Step 4: b = temp = 6
+Now, b becomes 6 (the original value of a before it was changed).
+Now, the new values are:
+
+a = 12
+b = 6
+Third Iteration (a = 12, b = 6):
+Step 1: a = a % b = 12 % 6 = 0
+Now, a becomes 0.
+Step 2: int temp = a = 0
+temp now holds the value 0.
+Step 3: a = b = 6
+Now, a becomes 6 (the previous value of b).
+Step 4: b = temp = 0
+Now, b becomes 0 (the original value of a before it was changed).
+Now, the new values are:
+
+a = 6
+b = 0
+End of Loop:
+Since b = 0, the loop terminates.
+Step 5: The function returns a, which is 6.*/
