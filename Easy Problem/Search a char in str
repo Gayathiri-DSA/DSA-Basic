@@ -1,0 +1,35 @@
+/*
+Search a Character in a String
+
+Difficulty: Easy Accuracy: 77.91% Submissions: 77+ Points: 2 Average Time: 5m
+
+Write a program to search for a given character in a string. If the character is found, print the index/position where it first appears in the string.
+If the character is not found, print -1.
+
+Problem link :https://www.geeksforgeeks.org/problems/search-a-character-in-a-string/1?page=1&sortBy=latest
+*/
+
+class Solution {
+    // Function to search for a character in the string
+    public int searchCharacter(String s, char ch) {
+        // code here
+        
+        for(int i=0 ; i<s.length() ; i++)
+        {
+          if(s.charAt(i)==ch)
+          {
+              return i;
+          }
+        }
+        return -1;
+    }
+/*
+Note:
+        **  Iterate through the string using for loop
+        ** when charAt position i in string == char we're searching return its position i
+        ** else print -1
+        Function:
+        
+        **length()--returns the length of the string
+        **CharAt()--returns the char at specified index
+*/
